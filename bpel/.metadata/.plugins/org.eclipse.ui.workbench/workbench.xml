@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workbench version="2.0">
+<workbenchAdvisor/>
+<window x="0" y="0" width="1024" height="738">
+<fastViewData fastViewLocation="1024"/>
+<perspectiveBar>
+<itemSize x="160"/>
+</perspectiveBar>
+<coolbarLayout locked="0">
+<coolItem id="group.file" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="95" y="22"/>
+<coolItem id="additions" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="121" y="22"/>
+<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="36" y="22"/>
+<coolItem id="group.nav" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="108" y="22"/>
+<coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="com.activee.bpep.deploy.editor.AevPDDEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="com.activee.bpep.editor.AevBPELEditor" itemType="typeToolBarContribution" x="557" y="22"/>
+<coolItem id="group.help" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
+</coolbarLayout>
+<page label="Workspace - ActiveBPEL" focus="true">
+<editors>
+<editorArea activeWorkbook="DefaultEditorWorkbook">
+<info part="DefaultEditorWorkbook">
+<folder expanded="2" appearance="1">
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
+</folder>
+</info>
+</editorArea>
+<editor title="shipment.bpel" name="shipment.bpel" id="com.activee.bpep.editor.AevBPELEditor" tooltip="shipment/shipment.bpel" partName="shipment.bpel" workbook="DefaultEditorWorkbook" focus="true" path="E:/bpel-labs/bpel/shipment/shipment.bpel">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/shipment/shipment.bpel"/>
+</editor>
+</editors>
+<views>
+<view id="com.activee.bpep.view.AevVariableView" partName="Process Variables">
+<viewState/>
+</view>
+<view id="org.eclipse.ui.views.TaskList" partName="Tasks"/>
+<view id="org.eclipse.ui.console.ConsoleView" partName="Console">
+<viewState/>
+</view>
+<view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
+<viewState/>
+</view>
+<view id="org.eclipse.debug.ui.DebugView" partName="Debug">
+<viewState/>
+</view>
+<view id="org.eclipse.ui.views.PropertySheet" partName="Properties">
+<viewState/>
+</view>
+<view id="com.activee.coreep.view.AevRegistryView" partName="Web References">
+<viewState/>
+</view>
+<view id="org.eclipse.debug.ui.BreakpointView" partName="Breakpoints"/>
+<view id="org.eclipse.pde.runtime.LogView" partName="Error Log"/>
+<view id="org.eclipse.ui.views.ProblemView" partName="Problems">
+<viewState columnWidth0="19" columnWidth1="200" columnWidth2="75" columnWidth3="150" columnWidth4="60" verticalPosition="0" horizontalPosition="0">
+<selection/>
+</viewState>
+</view>
+<view id="org.eclipse.ui.views.ResourceNavigator" partName="Navigator">
+<viewState sorter="1" LINK_NAVIGATOR_TO_EDITOR="0">
+<filters>
+<filter element="*.vbpel" isEnabled="true"/>
+<filter element=".*" isEnabled="false"/>
+</filters>
+<expanded>
+<element path="/shipment"/>
+</expanded>
+<selection>
+<element path="/shipment/shipment.bpel"/>
+</selection>
+</viewState>
+</view>
+</views>
+<perspectives activePerspective="com.activee.bpep.AevActivePMPerspective" activePart="org.eclipse.ui.views.ResourceNavigator">
+<perspective version="0.016" editorAreaVisible="1" fixed="0">
+<descriptor id="com.activee.bpep.AevActivePMPerspective" label="ActiveBPEL" class="com.activee.bpep.AevActivePMPerspective"/>
+<alwaysOnActionSet id="com.activee.bpep.help.action.set"/>
+<alwaysOnActionSet id="zcom.activee.coreep.search.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.openExternalFile"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.update.ui.softwareUpdates"/>
+<alwaysOnActionSet id="com.activee.bpep.simulation.action.set"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.launchActionSet"/>
+<show_view_action id="org.eclipse.ui.views.ResourceNavigator"/>
+<show_view_action id="org.eclipse.ui.views.ContentOutline"/>
+<show_view_action id="com.activee.bpep.view.AevVariableView"/>
+<show_view_action id="org.eclipse.ui.views.ProblemView"/>
+<show_view_action id="org.eclipse.ui.views.PropertySheet"/>
+<show_view_action id="com.activee.coreep.view.AevRegistryView"/>
+<show_view_action id="com.activee.bpep.view.AevThumbnailContentView"/>
+<show_view_action id="org.eclipse.pde.runtime.LogView"/>
+<show_view_action id="org.eclipse.ui.views.BookmarkView"/>
+<show_view_action id="org.eclipse.ui.views.TaskList"/>
+<new_wizard_action id="com.activee.bpep.wizard.AevBPELNewWizard"/>
+<new_wizard_action id="com.activee.bpep.deploy.wizard.AevNewDeploymentDescriptorWizard"/>
+<new_wizard_action id="com.activee.bpep.deploy.wizard.AevNewPartnerDefinitionWizard"/>
+<perspective_action id="com.activee.bpep.AevActivePMPerspective"/>
+<perspective_action id="com.activee.bpep.AevActivePMDebugPerspective"/>
+<view id="org.eclipse.ui.views.ResourceNavigator"/>
+<view id="com.activee.coreep.view.AevRegistryView"/>
+<view id="com.activee.bpep.view.AevVariableView"/>
+<view id="org.eclipse.ui.views.ContentOutline"/>
+<view id="org.eclipse.ui.views.PropertySheet"/>
+<view id="org.eclipse.ui.views.ProblemView"/>
+<view id="org.eclipse.ui.views.TaskList"/>
+<view id="org.eclipse.pde.runtime.LogView"/>
+<layout>
+<mainWindow>
+<info part="topLeftMargin" folder="true">
+<folder activePageID="org.eclipse.ui.views.ResourceNavigator" expanded="2" appearance="2">
+<page label="Navigator" content="org.eclipse.ui.views.ResourceNavigator"/>
+<page label="Web References" content="com.activee.coreep.view.AevRegistryView"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+</presentation>
+</folder>
+</info>
+<info part="org.eclipse.ui.internal.ViewStack@1d8f162" relative="topLeftMargin" relationship="2" ratioLeft="754" ratioRight="252" ratio="0.74950296" folder="true">
+<folder expanded="2" appearance="2">
+<page label="LabelNotFound" content="org.eclipse.help.ui.HelpView"/>
+<page label="LabelNotFound" content="org.eclipse.ui.internal.introview"/>
+<page label="LabelNotFound" content="org.eclipse.ui.cheatsheets.views.CheatSheetView"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" relative="topLeftMargin" relationship="2" ratioLeft="251" ratioRight="755" ratio="0.24950299"/>
+<info part="bottomLeft" relative="org.eclipse.ui.editorss" relationship="4" ratioLeft="464" ratioRight="155" ratio="0.7495961" folder="true">
+<folder activePageID="org.eclipse.ui.views.ContentOutline" expanded="2" appearance="2">
+<page label="Outline" content="org.eclipse.ui.views.ContentOutline"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info part="bottomRight" relative="bottomLeft" relationship="2" ratioLeft="249" ratioRight="506" ratio="0.32980132" folder="true">
+<folder activePageID="org.eclipse.ui.views.ProblemView" expanded="2" appearance="2">
+<page label="Properties" content="org.eclipse.ui.views.PropertySheet"/>
+<page label="Problems" content="org.eclipse.ui.views.ProblemView"/>
+<page label="Tasks" content="org.eclipse.ui.views.TaskList"/>
+<page label="Error Log" content="org.eclipse.pde.runtime.LogView"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+</presentation>
+</folder>
+</info>
+<info part="bottomLeftMargin" relative="topLeftMargin" relationship="4" ratioLeft="233" ratioRight="383" ratio="0.37824675" folder="true">
+<folder activePageID="com.activee.bpep.view.AevVariableView" expanded="2" appearance="2">
+<page label="Process Variables" content="com.activee.bpep.view.AevVariableView"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
+<perspective version="0.016" editorAreaVisible="1" fixed="0">
+<descriptor id="com.activee.bpep.AevActivePMDebugPerspective" label="ActiveBPEL Debug" class="com.activee.bpep.AevActivePMDebugPerspective"/>
+<alwaysOnActionSet id="com.activee.bpep.help.action.set"/>
+<alwaysOnActionSet id="zcom.activee.coreep.search.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.openExternalFile"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.update.ui.softwareUpdates"/>
+<alwaysOnActionSet id="com.activee.bpep.simulation.action.set"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.launchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.debugActionSet"/>
+<show_view_action id="org.eclipse.debug.ui.BreakpointView"/>
+<show_view_action id="org.eclipse.ui.console.ConsoleView"/>
+<show_view_action id="org.eclipse.debug.ui.DebugView"/>
+<show_view_action id="org.eclipse.pde.runtime.LogView"/>
+<show_view_action id="org.eclipse.ui.views.ResourceNavigator"/>
+<show_view_action id="org.eclipse.ui.views.ContentOutline"/>
+<show_view_action id="com.activee.bpep.view.AevVariableView"/>
+<show_view_action id="org.eclipse.ui.views.ProblemView"/>
+<show_view_action id="org.eclipse.ui.views.PropertySheet"/>
+<show_view_action id="com.activee.coreep.view.AevRegistryView"/>
+<new_wizard_action id="com.activee.bpep.wizard.AevBPELNewWizard"/>
+<new_wizard_action id="com.activee.bpep.deploy.wizard.AevNewDeploymentDescriptorWizard"/>
+<new_wizard_action id="com.activee.bpep.deploy.wizard.AevNewPartnerDefinitionWizard"/>
+<perspective_action id="com.activee.bpep.AevActivePMPerspective"/>
+<perspective_action id="com.activee.bpep.AevActivePMDebugPerspective"/>
+<view id="org.eclipse.ui.views.ResourceNavigator"/>
+<view id="com.activee.coreep.view.AevRegistryView"/>
+<view id="com.activee.bpep.view.AevVariableView"/>
+<view id="org.eclipse.debug.ui.BreakpointView"/>
+<view id="org.eclipse.ui.views.ContentOutline"/>
+<view id="org.eclipse.ui.console.ConsoleView"/>
+<view id="org.eclipse.ui.views.ProblemView"/>
+<view id="org.eclipse.ui.views.PropertySheet"/>
+<view id="org.eclipse.ui.views.TaskList"/>
+<view id="org.eclipse.pde.runtime.LogView"/>
+<view id="org.eclipse.debug.ui.DebugView"/>
+<layout>
+<mainWindow>
+<info part="topLeftMargin" folder="true">
+<folder activePageID="com.activee.coreep.view.AevRegistryView" expanded="2" appearance="2">
+<page label="Navigator" content="org.eclipse.ui.views.ResourceNavigator"/>
+<page label="Web References" content="com.activee.coreep.view.AevRegistryView"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+</presentation>
+</folder>
+</info>
+<info part="stickyFolderRight" relative="topLeftMargin" relationship="2" ratioLeft="754" ratioRight="252" ratio="0.74950296" folder="true">
+<folder expanded="2" appearance="2">
+<page label="LabelNotFound" content="org.eclipse.help.ui.HelpView"/>
+<page label="LabelNotFound" content="org.eclipse.ui.internal.introview"/>
+<page label="LabelNotFound" content="org.eclipse.ui.cheatsheets.views.CheatSheetView"/>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" relative="topLeftMargin" relationship="2" ratioLeft="251" ratioRight="755" ratio="0.24950299"/>
+<info part="bottomLeft" relative="org.eclipse.ui.editorss" relationship="4" ratioLeft="464" ratioRight="155" ratio="0.7495961" folder="true">
+<folder activePageID="org.eclipse.ui.views.ContentOutline" expanded="2" appearance="2">
+<page label="Breakpoints" content="org.eclipse.debug.ui.BreakpointView"/>
+<page label="Outline" content="org.eclipse.ui.views.ContentOutline"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+</presentation>
+</folder>
+</info>
+<info part="bottomRight" relative="bottomLeft" relationship="2" ratioLeft="249" ratioRight="506" ratio="0.32980132" folder="true">
+<folder activePageID="org.eclipse.ui.console.ConsoleView" expanded="2" appearance="2">
+<page label="Console" content="org.eclipse.ui.console.ConsoleView"/>
+<page label="Problems" content="org.eclipse.ui.views.ProblemView"/>
+<page label="Properties" content="org.eclipse.ui.views.PropertySheet"/>
+<page label="Tasks" content="org.eclipse.ui.views.TaskList"/>
+<page label="Error Log" content="org.eclipse.pde.runtime.LogView"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+<part id="4"/>
+</presentation>
+</folder>
+</info>
+<info part="org.eclipse.ui.internal.ViewStack@172cc99" relative="org.eclipse.ui.editorss" relationship="4" ratioLeft="348" ratioRight="116" ratio="0.75" folder="true">
+<folder activePageID="org.eclipse.debug.ui.DebugView" expanded="2" appearance="2">
+<page label="Debug" content="org.eclipse.debug.ui.DebugView"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info part="bottomLeftMargin" relative="topLeftMargin" relationship="4" ratioLeft="93" ratioRight="523" ratio="0.15097402" folder="true">
+<folder activePageID="com.activee.bpep.view.AevVariableView" expanded="2" appearance="2">
+<page label="Process Variables" content="com.activee.bpep.view.AevVariableView"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
+</perspectives>
+<navigationHistory>
+<editors>
+<editor id="com.activee.bpep.editor.AevBPELEditor" factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/shipment/shipment.bpel"/>
+<editor id="com.activee.bpep.deploy.editor.AevPDDEditor" factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/shipment/shipment.pdd"/>
+</editors>
+<item historyLabel="shipment.bpel" index="0"/>
+<item historyLabel="shipment.pdd" index="1">
+<position/>
+</item>
+<item active="true" historyLabel="shipment.bpel" index="0"/>
+</navigationHistory>
+<stickyState>
+<perspective IMemento.internal.id="com.activee.bpep.AevActivePMDebugPerspective"/>
+<perspective IMemento.internal.id="com.activee.bpep.AevActivePMPerspective"/>
+</stickyState>
+<input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
+</page>
+<workbenchWindowAdvisor/>
+<actionBarAdvisor/>
+</window>
+<mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.activee.bpep.editor.AevBPELEditor" name="shipment.bpel" tooltip="shipment/shipment.bpel">
+<persistable path="/shipment/shipment.bpel"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.activee.bpep.deploy.editor.AevPDDEditor" name="shipment.pdd" tooltip="shipment/shipment.pdd">
+<persistable path="/shipment/shipment.pdd"/>
+</file>
+</mruList>
+</workbench>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PartnerLinks>
+   <PartnerLink location="file:/E:/bpel-labs/ws/shipment/shipment.wsdl" name="ShipperLinkType"/>
+   <PartnerLink location="file:/E:/bpel-labs/ws/shipment/calculator.wsdl" name="CalculatorLinkType"/>
+   <PartnerLink location="file:/E:/bpel-labs/bpel/shipment/distance.wsdl" name="DistanceLinkType"/>
+</PartnerLinks>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+BPEL Process Definition
+Edited using ActiveBPEL(tm) Designer Version 2.0 (http://www.active-endpoints.com)
+-->
+<process name="shipment" suppressJoinFailure="yes" targetNamespace="http://shipment" xmlns="http://schemas.xmlsoap.org/ws/2003/03/business-process/" xmlns:bpws="http://schemas.xmlsoap.org/ws/2003/03/business-process/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>

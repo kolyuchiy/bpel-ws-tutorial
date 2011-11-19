@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ProcessRegistry>
+   <Process location="shipment/shipment.bpel" name="shipment" targetNamespace="http://shipment" timestamp="15"/>
+</ProcessRegistry>

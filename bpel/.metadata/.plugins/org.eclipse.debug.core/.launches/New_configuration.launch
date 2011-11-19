@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launchConfiguration type="com.activee.bpep.debug.remote.AevRemoteLaunchConfiguration">
+<booleanAttribute key="com.activee.bpep.debug.remote.check_out_of_sync" value="true"/>
+<booleanAttribute key="com.activee.bpep.debug.remote.waiting_to_start" value="false"/>
+<stringAttribute key="com.activee.bpep.debug.remote.username" value=""/>
+<stringAttribute key="com.activee.bpep.debug.remote.password" value=""/>
+<stringAttribute key="com.activee.bpep.debug.remote.process_local" value=""/>
+<stringAttribute key="com.activee.bpep.debug.remote.process_disconnect" value="Prompt"/>
+<booleanAttribute key="com.activee.bpep.debug.remote.auto_disconnect" value="true"/>
+<booleanAttribute key="com.activee.bpep.debug.remote.attach_on_breakpoint" value="true"/>
+<stringAttribute key="com.activee.bpep.debug.remote.authentication_mode" value="none"/>
+<stringAttribute key="com.activee.bpep.debug.remote.process_selection_mode" value="manual"/>
+<stringAttribute key="com.activee.bpep.debug.remote.password_again" value=""/>
+<stringAttribute key="com.activee.bpep.debug.remote.process_namespace" value=""/>
+<stringAttribute key="com.activee.bpep.debug.remote.server_url" value="http://localhost:8080/active-bpel/services/BpelEngineAdmin"/>
+<stringAttribute key="com.activee.bpep.debug.remote.process_filter" value=""/>
+</launchConfiguration>

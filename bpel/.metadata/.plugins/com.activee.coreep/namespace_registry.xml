@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Namespaces>
+   <Namespace namespace_uri="http://kolia.pp.ru/shipment/">
+      <Reference location="file:/E:/bpel-labs/ws/shipment/shipment.wsdl"/>
+   </Namespace>
+   <Namespace namespace_uri="http://kolia.pp.ru/calculator/">
+      <Reference location="file:/E:/bpel-labs/ws/shipment/calculator.wsdl"/>
+   </Namespace>
+   <Namespace namespace_uri="http://webservices.imacination.com/distance/Distance.jws">
+      <Reference location="file:/E:/bpel-labs/bpel/shipment/distance.wsdl"/>
+   </Namespace>
+</Namespaces>

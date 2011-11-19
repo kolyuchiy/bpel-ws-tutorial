@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launchConfiguration type="com.activee.bpep.debug.sim.AevSimulateLaunchConfiguration">
+<stringAttribute key="com.activee.bpep.debug.sim.project_name" value="shipment"/>
+<stringAttribute key="com.activee.bpep.debug.sim.process_name" value="shipment.bpel"/>
+</launchConfiguration>

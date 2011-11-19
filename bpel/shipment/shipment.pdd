@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<process location="bpel/shipment/shipment.bpel" name="bpelns:shipment" xmlns="http://schemas.active-endpoints.com/pdd/2005/09/pdd.xsd" xmlns:bpelns="http://shipment" xmlns:wsa="http://schemas.xmlsoap.org/ws/2003/03/addressing">
+   <partnerLinks>
+      <partnerLink name="CalculatorLinkType">
+         <partnerRole endpointReference="static">
+            <wsa:EndpointReference xmlns:s="http://kolia.pp.ru/calculator/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2003/03/addressing"> <wsa:Address>http://localhost:8080/shipment/services/calculatorSOAP</wsa:Address> <wsa:ServiceName PortName="calculatorSOAP">s:CalculatorService</wsa:ServiceName> </wsa:EndpointReference>
+         </partnerRole>
+      </partnerLink>
+      <partnerLink name="DistanceLinkType">
+         <partnerRole endpointReference="static">
+            <wsa:EndpointReference xmlns:s="http://webservices.imacination.com/distance/Distance.jws" xmlns:wsa="http://schemas.xmlsoap.org/ws/2003/03/addressing"> <wsa:Address>http://webservices.imacination.com/distance/Distance.jws</wsa:Address> <wsa:ServiceName PortName="Distance">s:DistanceService</wsa:ServiceName> </wsa:EndpointReference>
+         </partnerRole>
+      </partnerLink>
+      <partnerLink name="ShipperLinkType">
+         <myRole allowedRoles="" binding="RPC" service="ShipperLinkTypeService"/>
+      </partnerLink>
+   </partnerLinks>
+   <wsdlReferences>
+      <wsdl location="file:/E:/bpel-labs/ws/shipment/shipment.wsdl" namespace="http://kolia.pp.ru/shipment/"/>
+      <wsdl location="file:/E:/bpel-labs/bpel/shipment/distance.wsdl" namespace="http://webservices.imacination.com/distance/Distance.jws"/>
+      <wsdl location="file:/E:/bpel-labs/ws/shipment/calculator.wsdl" namespace="http://kolia.pp.ru/calculator/"/>
+   </wsdlReferences>
+</process>

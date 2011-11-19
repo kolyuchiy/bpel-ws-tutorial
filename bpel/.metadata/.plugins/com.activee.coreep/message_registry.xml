@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Messages>
+   <Message location="file:/E:/bpel-labs/ws/shipment/shipment.wsdl" name="orderRequest" namespace_uri="http://kolia.pp.ru/shipment/">
+      <Part name="shipFrom">
+         <Sample data="10001" default="true" is_complex="false"/>
+      </Part>
+      <Part name="shipTo">
+         <Sample data="20001" default="true" is_complex="false"/>
+      </Part>
+   </Message>
+   <Message location="file:/E:/bpel-labs/ws/shipment/shipment.wsdl" name="orderResponse" namespace_uri="http://kolia.pp.ru/shipment/"/>
+   <Message location="file:/E:/bpel-labs/ws/shipment/calculator.wsdl" name="calculatePriceRequest" namespace_uri="http://kolia.pp.ru/calculator/">
+      <Part name="distance">
+         <Sample data="100" default="true" is_complex="false"/>
+      </Part>
+   </Message>
+   <Message location="file:/E:/bpel-labs/ws/shipment/calculator.wsdl" name="calculatePriceResponse" namespace_uri="http://kolia.pp.ru/calculator/">
+      <Part name="price">
+         <Sample data="100" default="true" is_complex="false"/>
+      </Part>
+   </Message>
+   <Message location="file:/E:/bpel-labs/bpel/shipment/distance.wsdl" name="getCityResponse" namespace_uri="http://webservices.imacination.com/distance/Distance.jws"/>
+   <Message location="file:/E:/bpel-labs/bpel/shipment/distance.wsdl" name="getStateResponse" namespace_uri="http://webservices.imacination.com/distance/Distance.jws"/>
+   <Message location="file:/E:/bpel-labs/bpel/shipment/distance.wsdl" name="getStateRequest" namespace_uri="http://webservices.imacination.com/distance/Distance.jws"/>
+   <Message location="file:/E:/bpel-labs/bpel/shipment/distance.wsdl" name="getLatitudeRequest" namespace_uri="http://webservices.imacination.com/distance/Distance.jws"/>
+   <Message location="file:/E:/bpel-labs/bpel/shipment/distance.wsdl" name="getLongitudeResponse" namespace_uri="http://webservices.imacination.com/distance/Distance.jws"/>
+   <Message location="file:/E:/bpel-labs/bpel/shipment/distance.wsdl" name="getLocationResponse" namespace_uri="http://webservices.imacination.com/distance/Distance.jws"/>
+   <Message location="file:/E:/bpel-labs/bpel/shipment/distance.wsdl" name="getDistanceResponse" namespace_uri="http://webservices.imacination.com/distance/Distance.jws">
+      <Part name="getDistanceReturn">
+         <Sample data="100" default="true" is_complex="false"/>
+      <Sample data="0" is_complex="false"/>
+      </Part>
+   </Message>
+   <Message location="file:/E:/bpel-labs/bpel/shipment/distance.wsdl" name="getCityRequest" namespace_uri="http://webservices.imacination.com/distance/Distance.jws"/>
+   <Message location="file:/E:/bpel-labs/bpel/shipment/distance.wsdl" name="getLongitudeRequest" namespace_uri="http://webservices.imacination.com/distance/Distance.jws"/>
+   <Message location="file:/E:/bpel-labs/bpel/shipment/distance.wsdl" name="getLocationRequest" namespace_uri="http://webservices.imacination.com/distance/Distance.jws"/>
+   <Message location="file:/E:/bpel-labs/bpel/shipment/distance.wsdl" name="getDistanceRequest" namespace_uri="http://webservices.imacination.com/distance/Distance.jws"/>
+   <Message location="file:/E:/bpel-labs/bpel/shipment/distance.wsdl" name="getLatitudeResponse" namespace_uri="http://webservices.imacination.com/distance/Distance.jws"/>
+</Messages>

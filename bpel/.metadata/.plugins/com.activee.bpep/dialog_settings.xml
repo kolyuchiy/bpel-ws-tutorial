@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="com.activee.bpep.deploy.wizard.AevBPRExportWizard">
+		<item key="setting_wsusername_bpr" value=""/>
+		<item key="setting_deployment_type_bpr" value="File"/>
+		<item key="setting_deployment_directory_bpr" value="G:\Program Files\Active Endpoints\ActiveBPEL Designer\Server\ActiveBPEL_Tomcat\bpr"/>
+		<item key="setting_specification_filename_bpr" value=""/>
+		<item key="setting_archive_filename_bpr" value="E:\bpel-labs\bpel\shipment\deploy\shipment.bpr"/>
+		<item key="setting_save_to_workspace_bpr" value="false"/>
+		<item key="setting_deployment_url_bpr" value="http://localhost:8080/active-bpel/services/DeployBPRService"/>
+	</section>
+</section>

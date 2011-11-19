@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:bpws="http://schemas.xmlsoap.org/ws/2003/03/business-process/" xmlns:plnk="http://schemas.xmlsoap.org/ws/2003/05/partner-link/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://kolia.pp.ru/calculator/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="calculator" targetNamespace="http://kolia.pp.ru/calculator/">
+  <wsdl:message name="calculatePriceRequest">
+    <wsdl:part name="distance" type="xsd:double"/>
+  </wsdl:message>
+  <wsdl:message name="calculatePriceResponse">
+    <wsdl:part name="price" type="xsd:double"/>
+  </wsdl:message>
+  <wsdl:portType name="Calculator">
+    <wsdl:operation name="calculatePrice">
+      <wsdl:input message="tns:calculatePriceRequest"/>
+      <wsdl:output message="tns:calculatePriceResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="calculatorSOAP" type="tns:Calculator">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="calculatePrice">
+    <soap:operation soapAction="http://kolia.pp.ru/calculator/NewOperation"/>
+      <wsdl:input>
+    <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://kolia.pp.ru/calculator/" use="encoded"/>
+      </wsdl:input>
+      <wsdl:output>
+    <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://kolia.pp.ru/calculator/" use="encoded"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CalculatorService">
+    <wsdl:port binding="tns:calculatorSOAP" name="calculatorSOAP">
+    <soap:address location="http://localhost:8080/shipment/services/calculatorSOAP"/>
+    </wsdl:port>
+  </wsdl:service>
+<plnk:partnerLinkType name="CalculatorLinkType">
+   <plnk:role name="calculator">
+      <plnk:portType name="tns:Calculator"/>
+   </plnk:role>
+</plnk:partnerLinkType>
+</wsdl:definitions>

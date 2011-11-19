@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inspection xmlns="http://schemas.xmlsoap.org/ws/2001/10/inspection/">
+   <service>
+      <description location="file:/E:/bpel-labs/ws/shipment/shipment.wsdl" referencedNamespace="http://schemas.xmlsoap.org/wsdl/"/>
+   </service>
+<service>
+      <description location="file:/E:/bpel-labs/ws/shipment/calculator.wsdl" referencedNamespace="http://schemas.xmlsoap.org/wsdl/"/>
+   </service>
+<service>
+      <description location="file:/E:/bpel-labs/bpel/shipment/distance.wsdl" referencedNamespace="http://schemas.xmlsoap.org/wsdl/"/>
+   </service>
+</inspection>

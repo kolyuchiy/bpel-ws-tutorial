@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+BPEL Process Definition
+Edited using ActiveBPEL(tm) Designer Version 2.0 (http://www.active-endpoints.com)
+-->
+<process name="shipment" suppressJoinFailure="yes" targetNamespace="http://shipment" xmlns="http://schemas.xmlsoap.org/ws/2003/03/business-process/" xmlns:bpws="http://schemas.xmlsoap.org/ws/2003/03/business-process/" xmlns:ns1="http://kolia.pp.ru/shipment/" xmlns:ns2="http://webservices.imacination.com/distance/Distance.jws" xmlns:ns3="http://kolia.pp.ru/calculator/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <partnerLinks>
+      <partnerLink myRole="shipper" name="ShipperLinkType" partnerLinkType="ns1:ShipperLinkType"/>
+      <partnerLink name="DistanceLinkType" partnerLinkType="ns2:DistanceLinkType" partnerRole="distance"/>
+      <partnerLink name="CalculatorLinkType" partnerLinkType="ns3:CalculatorLinkType" partnerRole="calculator"/>
+   </partnerLinks>
+   <variables>
+      <variable messageType="ns1:orderRequest" name="orderRequest"/>
+      <variable messageType="ns1:orderResponse" name="orderResponse"/>
+      <variable messageType="ns2:getDistanceRequest" name="getDistanceRequest"/>
+      <variable messageType="ns2:getDistanceResponse" name="getDistanceResponse"/>
+      <variable messageType="ns3:priceRequest" name="priceRequest"/>
+      <variable messageType="ns3:priceResponse" name="priceResponse"/>
+   </variables>
+   <flow>
+      <links>
+         <link name="L1"/>
+         <link name="L2"/>
+         <link name="L3"/>
+         <link name="L4"/>
+         <link name="L5"/>
+      </links>
+      <receive operation="order" partnerLink="ShipperLinkType" portType="ns1:ShipmentOrder" variable="orderRequest">
+         <source linkName="L1"/>
+      </receive>
+      <reply operation="order" partnerLink="ShipperLinkType" portType="ns1:ShipmentOrder" variable="orderResponse">
+         <target linkName="L3"/>
+         <target linkName="L4"/>
+      </reply>
+      <invoke inputVariable="getDistanceRequest" name="Distance" operation="getDistance" outputVariable="getDistanceResponse" partnerLink="DistanceLinkType" portType="ns2:Distance">
+         <target linkName="L5"/>
+         <source linkName="L2" transitionCondition="bpws:getVariableData('getDistanceResponse', 'getDistanceReturn') &gt; 0"/>
+         <source linkName="L3" transitionCondition="bpws:getVariableData('getDistanceResponse', 'getDistanceReturn') = 0"/>
+      </invoke>
+      <invoke inputVariable="priceRequest" name="Price" operation="price" outputVariable="priceResponse" partnerLink="CalculatorLinkType" portType="ns3:Calculator">
+         <target linkName="L2"/>
+         <source linkName="L4"/>
+      </invoke>
+      <assign>
+         <target linkName="L1"/>
+         <source linkName="L5"/>
+         <copy>
+            <from part="shipFrom" variable="orderRequest"/>
+            <to part="fromZip" variable="getDistanceRequest"/>
+         </copy>
+         <copy>
+            <from part="shipTo" variable="orderRequest"/>
+            <to part="toZip" variable="getDistanceRequest"/>
+         </copy>
+      </assign>
+   </flow>
+</process>

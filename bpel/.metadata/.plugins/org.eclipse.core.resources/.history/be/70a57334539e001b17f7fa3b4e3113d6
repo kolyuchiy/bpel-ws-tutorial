@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graph id="0" name="PROCESS">
+   <att name="processName" value="shipment"/>
+   <att name="targetNamespace" value="http://shipment"/>
+   <att name="BPELComment" value=""/>
+   <att name="queryLanguage" value=""/>
+   <att name="expressionLanguage" value=""/>
+   <att name="suppressJoinFailure" value="true"/>
+   <att name="enableInstanceCompensation" value="false"/>
+   <att name="abstractProcess" value="false"/>
+   <att name="backgroundColor" value="RGB {255,255,255}"/>
+   <att name="router" value="1"/>
+   <att name="showMarkers" value="true"/>
+   <att name="messageExchanges" value=""/>
+   <att name="modelVersion" value="1"/>
+   <att name="objectId" value="116817448371800045"/>
+   <att>
+      <graph id="1" name="IMPORTS">
+         <att name="ImportCount" value="3"/>
+         <node id="2" name="IMPORT">
+            <att name="ImportLocation" value="file:/E:/bpel-labs/ws/shipment/shipment.wsdl;http://kolia.pp.ru/shipment/"/>
+            <att name="ImportNamespace" value="http://kolia.pp.ru/shipment/"/>
+            <att name="objectId" value="116817522187500439"/>
+         </node>
+         <node id="3" name="IMPORT">
+            <att name="ImportLocation" value="file:/E:/bpel-labs/bpel/shipment/distance.wsdl;http://webservices.imacination.com/distance/Distance.jws"/>
+            <att name="ImportNamespace" value="http://webservices.imacination.com/distance/Distance.jws"/>
+            <att name="objectId" value="116817538167100931"/>
+         </node>
+         <node id="4" name="IMPORT">
+            <att name="ImportLocation" value="file:/E:/bpel-labs/ws/shipment/calculator.wsdl;http://kolia.pp.ru/calculator/"/>
+            <att name="ImportNamespace" value="http://kolia.pp.ru/calculator/"/>
+            <att name="objectId" value="116817542289001451"/>
+         </node>
+      </graph>
+   </att>
+   <att>
+      <graph id="5" name="NAMESPACES">
+         <att name="NamespaceCount" value="5"/>
+         <node id="6" name="NAMESPACE">
+            <att name="Prefix" value="xsd"/>
+            <att name="Namespace" value="http://www.w3.org/2001/XMLSchema"/>
+            <att name="objectId" value="116817448373400067"/>
+         </node>
+         <node id="7" name="NAMESPACE">
+            <att name="Prefix" value="bpws"/>
+            <att name="Namespace" value="http://schemas.xmlsoap.org/ws/2003/03/business-process/"/>
+            <att name="objectId" value="116817448375000069"/>
+         </node>
+         <node id="8" name="NAMESPACE">
+            <att name="Prefix" value="ns1"/>
+            <att name="Namespace" value="http://kolia.pp.ru/shipment/"/>
+            <att name="objectId" value="116817522187500437"/>
+         </node>
+         <node id="9" name="NAMESPACE">
+            <att name="Prefix" value="ns2"/>
+            <att name="Namespace" value="http://webservices.imacination.com/distance/Distance.jws"/>
+            <att name="objectId" value="116817538167100929"/>
+         </node>
+         <node id="10" name="NAMESPACE">
+            <att name="Prefix" value="ns3"/>
+            <att name="Namespace" value="http://kolia.pp.ru/calculator/"/>
+            <att name="objectId" value="116817542289001449"/>
+         </node>
+      </graph>
+   </att>
+   <att>
+      <graph id="11" name="PARTNER_LINKS">
+         <att name="PartnerLinkCount" value="3"/>
+         <node id="12" name="PARTNER_LINK">
+            <att name="borderColor" value="RGB {147,226,247}"/>
+            <att name="backgroundColor" value="RGB {227,249,253}"/>
+            <att name="pLineStyle" value="1"/>
+            <att name="pLineColor" value="RGB {195,195,195}"/>
+            <att name="pRouterOverride" value="0"/>
+            <att name="placement" value="16"/>
+            <att name="PartnerLinkName" value="ShipperLinkType"/>
+            <att name="PartnerLinkType" value="ns1:ShipperLinkType"/>
+            <att name="PartnerRole" value=""/>
+            <att name="MyRole" value="shipper"/>
+            <att name="User Locations" value=""/>
+            <att name="visible" value="false,false,false,false,"/>
+            <att name="BPELComment" value=""/>
+            <att name="objectId" value="116817522184300419"/>
+         </node>
+         <node id="13" name="PARTNER_LINK">
+            <att name="borderColor" value="RGB {147,226,247}"/>
+            <att name="backgroundColor" value="RGB {227,249,253}"/>
+            <att name="pLineStyle" value="1"/>
+            <att name="pLineColor" value="RGB {195,195,195}"/>
+            <att name="pRouterOverride" value="0"/>
+            <att name="placement" value="16"/>
+            <att name="PartnerLinkName" value="DistanceLinkType"/>
+            <att name="PartnerLinkType" value="ns2:DistanceLinkType"/>
+            <att name="PartnerRole" value="distance"/>
+            <att name="MyRole" value=""/>
+            <att name="User Locations" value=""/>
+            <att name="visible" value="false,false,false,false,"/>
+            <att name="BPELComment" value=""/>
+            <att name="objectId" value="116817538164000913"/>
+         </node>
+         <node id="14" name="PARTNER_LINK">
+            <att name="borderColor" value="RGB {147,226,247}"/>
+            <att name="backgroundColor" value="RGB {227,249,253}"/>
+            <att name="pLineStyle" value="1"/>
+            <att name="pLineColor" value="RGB {195,195,195}"/>
+            <att name="pRouterOverride" value="0"/>
+            <att name="placement" value="16"/>
+            <att name="PartnerLinkName" value="CalculatorLinkType"/>
+            <att name="PartnerLinkType" value="ns3:CalculatorLinkType"/>
+            <att name="PartnerRole" value="calculator"/>
+            <att name="MyRole" value=""/>
+            <att name="User Locations" value=""/>
+            <att name="visible" value="false,false,false,false,"/>
+            <att name="BPELComment" value=""/>
+            <att name="objectId" value="116817542287501433"/>
+         </node>
+      </graph>
+   </att>
+   <node id="15" name="PARTNERS">
+      <att name="partnerCount" value="0"/>
+   </node>
+   <att>
+      <graph id="16" name="VARIABLE_CONTAINERS">
+         <att name="VariableCount" value="6"/>
+         <node id="17" name="VARIABLE_CONTAINER">
+            <att name="VariableName" value="orderRequest"/>
+            <att name="VariableSpecification" value="MessageType=ns1:orderRequest"/>
+            <att name="BPELComment" value=""/>
+            <att name="objectId" value="116817522185900429"/>
+         </node>
+         <node id="18" name="VARIABLE_CONTAINER">
+            <att name="VariableName" value="orderResponse"/>
+            <att name="VariableSpecification" value="MessageType=ns1:orderResponse"/>
+            <att name="BPELComment" value=""/>
+            <att name="objectId" value="116817522185900431"/>
+         </node>
+         <node id="19" name="VARIABLE_CONTAINER">
+            <att name="VariableName" value="getDistanceRequest"/>
+            <att name="VariableSpecification" value="MessageType=ns2:getDistanceRequest"/>
+            <att name="BPELComment" value=""/>
+            <att name="objectId" value="116817538167100923"/>
+         </node>
+         <node id="20" name="VARIABLE_CONTAINER">
+            <att name="VariableName" value="getDistanceResponse"/>
+            <att name="VariableSpecification" value="MessageType=ns2:getDistanceResponse"/>
+            <att name="BPELComment" value=""/>
+            <att name="objectId" value="116817538167100925"/>
+         </node>
+         <node id="21" name="VARIABLE_CONTAINER">
+            <att name="VariableName" value="priceRequest"/>
+            <att name="VariableSpecification" value="MessageType=ns3:priceRequest"/>
+            <att name="BPELComment" value=""/>
+            <att name="objectId" value="116817542289001443"/>
+         </node>
+         <node id="22" name="VARIABLE_CONTAINER">
+            <att name="VariableName" value="priceResponse"/>
+            <att name="VariableSpecification" value="MessageType=ns3:priceResponse"/>
+            <att name="BPELComment" value=""/>
+            <att name="objectId" value="116817542289001445"/>
+         </node>
+      </graph>
+   </att>
+   <node id="23" name="CORRELATION_CONTAINERS">
+      <att name="CorrSetCount" value="0"/>
+   </node>
+   <att>
+      <graph id="24" name="SCOPE_ACTIVITY">
+         <att name="text" value="Process"/>
+         <att name="objectId" value="116817448371800055"/>
+         <att name="drawBorder" value="false"/>
+         <att name="borderColor" value="RGB {128,128,128}"/>
+         <att name="transparent" value="false"/>
+         <att name="backgroundColor" value="RGB {255,255,255}"/>
+         <att name="font" value="FONT {Tahoma,8,0}"/>
+         <att name="fontColor" value="RGB {0,0,0}"/>
+         <att name="imageDisplay" value="true"/>
+         <att name="imageLocation" value="icons/activity/scopeActivity.png"/>
+         <att name="scaleImage" value="false"/>
+         <att name="imageTextGap" value="4"/>
+         <att name="textAlignment" value="2"/>
+         <att name="textPlacement" value="16"/>
+         <att name="location" value="LOC {0,0}"/>
+         <att name="sizeToFit" value="false"/>
+         <att name="size" value="DIM {20,20}"/>
+         <node id="25" name="RECEIVE">
+            <att name="objectId" value="116817522185900433"/>
+            <att name="drawBorder" value="false"/>
+            <att name="borderColor" value="RGB {0,0,255}"/>
+            <att name="transparent" value="true"/>
+            <att name="backgroundColor" value="RGB {226,226,226}"/>
+            <att name="font" value="FONT {Tahoma,8,0}"/>
+            <att name="fontColor" value="RGB {0,0,0}"/>
+            <att name="imageDisplay" value="true"/>
+            <att name="imageLocation" value="icons/activity/large/paletteReceiveLarge.png"/>
+            <att name="scaleImage" value="false"/>
+            <att name="imageTextGap" value="4"/>
+            <att name="textAlignment" value="2"/>
+            <att name="textPlacement" value="16"/>
+            <att name="location" value="LOC {20,1}"/>
+            <att name="sizeToFit" value="true"/>
+            <att name="size" value="DIM {109,56}"/>
+            <att name="name" value=""/>
+            <att name="joinCondition" value=""/>
+            <att name="suppressJoin" value=""/>
+            <att name="BPELComment" value=""/>
+            <att name="textFormat" value="1"/>
+            <att name="text" value="Receive order"/>
+            <att name="partnerLink" value="ShipperLinkType"/>
+            <att name="portType" value="ns1:ShipmentOrder"/>
+            <att name="operation" value="order"/>
+            <att name="correlations" value="#false"/>
+            <att name="createInstance" value="false"/>
+            <att name="variable" value="orderRequest"/>
+            <att name="message" value=""/>
+            <att name="messageExchange" value=""/>
+         </node>
+         <node id="26" name="REPLY">
+            <att name="objectId" value="116817522187500435"/>
+            <att name="drawBorder" value="false"/>
+            <att name="borderColor" value="RGB {0,0,255}"/>
+            <att name="transparent" value="true"/>
+            <att name="backgroundColor" value="RGB {226,226,226}"/>
+            <att name="font" value="FONT {Tahoma,8,0}"/>
+            <att name="fontColor" value="RGB {0,0,0}"/>
+            <att name="imageDisplay" value="true"/>
+            <att name="imageLocation" value="icons/activity/large/paletteReplyLarge.png"/>
+            <att name="scaleImage" value="false"/>
+            <att name="imageTextGap" value="4"/>
+            <att name="textAlignment" value="2"/>
+            <att name="textPlacement" value="16"/>
+            <att name="location" value="LOC {166,309}"/>
+            <att name="sizeToFit" value="true"/>
+            <att name="size" value="DIM {98,56}"/>
+            <att name="name" value=""/>
+            <att name="joinCondition" value=""/>
+            <att name="suppressJoin" value=""/>
+            <att name="BPELComment" value=""/>
+            <att name="textFormat" value="1"/>
+            <att name="text" value="Reply order"/>
+            <att name="partnerLink" value="ShipperLinkType"/>
+            <att name="portType" value="ns1:ShipmentOrder"/>
+            <att name="operation" value="order"/>
+            <att name="correlations" value="#false"/>
+            <att name="faultName" value=""/>
+            <att name="variable" value="orderResponse"/>
+            <att name="messageExchange" value=""/>
+         </node>
+         <node id="27" name="INVOKE">
+            <att name="objectId" value="116817538167100927"/>
+            <att name="drawBorder" value="false"/>
+            <att name="borderColor" value="RGB {0,0,255}"/>
+            <att name="transparent" value="true"/>
+            <att name="backgroundColor" value="RGB {226,226,226}"/>
+            <att name="font" value="FONT {Tahoma,8,0}"/>
+            <att name="fontColor" value="RGB {0,0,0}"/>
+            <att name="imageDisplay" value="true"/>
+            <att name="imageLocation" value="icons/activity/large/paletteInvokeLarge.png"/>
+            <att name="scaleImage" value="false"/>
+            <att name="imageTextGap" value="4"/>
+            <att name="textAlignment" value="2"/>
+            <att name="textPlacement" value="16"/>
+            <att name="location" value="LOC {20,122}"/>
+            <att name="sizeToFit" value="true"/>
+            <att name="size" value="DIM {112,56}"/>
+            <att name="name" value="Distance"/>
+            <att name="joinCondition" value=""/>
+            <att name="suppressJoin" value=""/>
+            <att name="BPELComment" value=""/>
+            <att name="textFormat" value="1"/>
+            <att name="text" value="Invoke getDistance"/>
+            <att name="partnerLink" value="DistanceLinkType"/>
+            <att name="portType" value="ns2:Distance"/>
+            <att name="operation" value="getDistance"/>
+            <att name="correlations" value="#true"/>
+            <att name="inputVariable" value="getDistanceRequest"/>
+            <att name="outputVariable" value="getDistanceResponse"/>
+            <att name="invokeReturn" value="0"/>
+            <att name="invokeOutput" value=""/>
+            <att name="invokeFaultName" value=""/>
+         </node>
+         <node id="28" name="INVOKE">
+            <att name="objectId" value="116817542289001447"/>
+            <att name="drawBorder" value="false"/>
+            <att name="borderColor" value="RGB {0,0,255}"/>
+            <att name="transparent" value="true"/>
+            <att name="backgroundColor" value="RGB {226,226,226}"/>
+            <att name="font" value="FONT {Tahoma,8,0}"/>
+            <att name="fontColor" value="RGB {0,0,0}"/>
+            <att name="imageDisplay" value="true"/>
+            <att name="imageLocation" value="icons/activity/large/paletteInvokeLarge.png"/>
+            <att name="scaleImage" value="false"/>
+            <att name="imageTextGap" value="4"/>
+            <att name="textAlignment" value="2"/>
+            <att name="textPlacement" value="16"/>
+            <att name="location" value="LOC {308,251}"/>
+            <att name="sizeToFit" value="true"/>
+            <att name="size" value="DIM {94,56}"/>
+            <att name="name" value="Price"/>
+            <att name="joinCondition" value=""/>
+            <att name="suppressJoin" value=""/>
+            <att name="BPELComment" value=""/>
+            <att name="textFormat" value="1"/>
+            <att name="text" value="Invoke price"/>
+            <att name="partnerLink" value="CalculatorLinkType"/>
+            <att name="portType" value="ns3:Calculator"/>
+            <att name="operation" value="price"/>
+            <att name="correlations" value="#true"/>
+            <att name="inputVariable" value="priceRequest"/>
+            <att name="outputVariable" value="priceResponse"/>
+            <att name="invokeReturn" value="0"/>
+            <att name="invokeOutput" value=""/>
+            <att name="invokeFaultName" value=""/>
+         </node>
+         <att>
+            <graph id="29" name="ASSIGN">
+               <att name="objectId" value="116817627068706131"/>
+               <att name="drawBorder" value="false"/>
+               <att name="borderColor" value="RGB {0,0,255}"/>
+               <att name="transparent" value="true"/>
+               <att name="backgroundColor" value="RGB {226,226,226}"/>
+               <att name="font" value="FONT {Tahoma,8,0}"/>
+               <att name="fontColor" value="RGB {0,0,0}"/>
+               <att name="imageDisplay" value="true"/>
+               <att name="imageLocation" value="icons/activity/large/paletteAssignLarge.png"/>
+               <att name="scaleImage" value="false"/>
+               <att name="imageTextGap" value="4"/>
+               <att name="textAlignment" value="2"/>
+               <att name="textPlacement" value="16"/>
+               <att name="location" value="LOC {20,60}"/>
+               <att name="sizeToFit" value="true"/>
+               <att name="size" value="DIM {102,56}"/>
+               <att name="name" value=""/>
+               <att name="joinCondition" value=""/>
+               <att name="suppressJoin" value=""/>
+               <att name="BPELComment" value=""/>
+               <att name="textFormat" value="1"/>
+               <att name="text" value=""/>
+               <att name="copy" value="2"/>
+               <node id="30" name="ASSIGN_COPY">
+                  <att name="fromVariable" value="orderRequest"/>
+                  <att name="fromPart" value="shipFrom"/>
+                  <att name="fromQuery" value=""/>
+                  <att name="fromPartnerLink" value=""/>
+                  <att name="fromEndpointReference" value=""/>
+                  <att name="fromProperty" value=""/>
+                  <att name="fromExpression" value=""/>
+                  <att name="fromLiteral" value=""/>
+                  <att name="fromOpaque" value="false"/>
+                  <att name="toVariable" value="getDistanceRequest"/>
+                  <att name="toPart" value="fromZip"/>
+                  <att name="toQuery" value=""/>
+                  <att name="toPartnerLink" value=""/>
+                  <att name="toProperty" value=""/>
+                  <att name="objectId" value="116817632240606231"/>
+               </node>
+               <node id="31" name="ASSIGN_COPY">
+                  <att name="fromVariable" value="orderRequest"/>
+                  <att name="fromPart" value="shipTo"/>
+                  <att name="fromQuery" value=""/>
+                  <att name="fromPartnerLink" value=""/>
+                  <att name="fromEndpointReference" value=""/>
+                  <att name="fromProperty" value=""/>
+                  <att name="fromExpression" value=""/>
+                  <att name="fromLiteral" value=""/>
+                  <att name="fromOpaque" value="false"/>
+                  <att name="toVariable" value="getDistanceRequest"/>
+                  <att name="toPart" value="toZip"/>
+                  <att name="toQuery" value=""/>
+                  <att name="toPartnerLink" value=""/>
+                  <att name="toProperty" value=""/>
+                  <att name="objectId" value="116817635584306331"/>
+               </node>
+            </graph>
+         </att>
+         <att>
+            <graph id="32" name="ASSIGN">
+               <att name="objectId" value="116817647506207771"/>
+               <att name="drawBorder" value="false"/>
+               <att name="borderColor" value="RGB {0,0,255}"/>
+               <att name="transparent" value="true"/>
+               <att name="backgroundColor" value="RGB {226,226,226}"/>
+               <att name="font" value="FONT {Tahoma,8,0}"/>
+               <att name="fontColor" value="RGB {0,0,0}"/>
+               <att name="imageDisplay" value="true"/>
+               <att name="imageLocation" value="icons/activity/large/paletteAssignLarge.png"/>
+               <att name="scaleImage" value="false"/>
+               <att name="imageTextGap" value="4"/>
+               <att name="textAlignment" value="2"/>
+               <att name="textPlacement" value="16"/>
+               <att name="location" value="LOC {308,189}"/>
+               <att name="sizeToFit" value="true"/>
+               <att name="size" value="DIM {102,56}"/>
+               <att name="name" value=""/>
+               <att name="joinCondition" value=""/>
+               <att name="suppressJoin" value=""/>
+               <att name="BPELComment" value=""/>
+               <att name="textFormat" value="1"/>
+               <att name="text" value=""/>
+               <att name="copy" value="1"/>
+               <node id="33" name="ASSIGN_COPY">
+                  <att name="fromVariable" value="getDistanceResponse"/>
+                  <att name="fromPart" value="getDistanceReturn"/>
+                  <att name="fromQuery" value=""/>
+                  <att name="fromPartnerLink" value=""/>
+                  <att name="fromEndpointReference" value=""/>
+                  <att name="fromProperty" value=""/>
+                  <att name="fromExpression" value=""/>
+                  <att name="fromLiteral" value=""/>
+                  <att name="fromOpaque" value="false"/>
+                  <att name="toVariable" value="priceRequest"/>
+                  <att name="toPart" value="distance"/>
+                  <att name="toQuery" value=""/>
+                  <att name="toPartnerLink" value=""/>
+                  <att name="toProperty" value=""/>
+                  <att name="objectId" value="116817648125007871"/>
+               </node>
+            </graph>
+         </att>
+      </graph>
+   </att>
+   <node id="34" name="SCOPE_FAULTHANDLER">
+      <att name="text" value="Fault Handlers"/>
+      <att name="objectId" value="116817448373400059"/>
+      <att name="drawBorder" value="true"/>
+      <att name="borderColor" value="RGB {128,128,128}"/>
+      <att name="transparent" value="false"/>
+      <att name="backgroundColor" value="RGB {226,226,226}"/>
+      <att name="font" value="FONT {Tahoma,8,0}"/>
+      <att name="fontColor" value="RGB {0,0,0}"/>
+      <att name="imageDisplay" value="true"/>
+      <att name="imageLocation" value="icons/activity/faultHandler.png"/>
+      <att name="scaleImage" value="false"/>
+      <att name="imageTextGap" value="4"/>
+      <att name="textAlignment" value="2"/>
+      <att name="textPlacement" value="16"/>
+      <att name="location" value="LOC {0,0}"/>
+      <att name="sizeToFit" value="true"/>
+      <att name="size" value="DIM {20,20}"/>
+      <att name="bandConstraints" value="BANDS {}"/>
+      <att name="bandOrientation" value="true"/>
+   </node>
+   <node id="35" name="SCOPE_EVENTHANDLER">
+      <att name="text" value="Event Handlers"/>
+      <att name="objectId" value="116817448373400061"/>
+      <att name="drawBorder" value="true"/>
+      <att name="borderColor" value="RGB {128,128,128}"/>
+      <att name="transparent" value="false"/>
+      <att name="backgroundColor" value="RGB {226,226,226}"/>
+      <att name="font" value="FONT {Tahoma,8,0}"/>
+      <att name="fontColor" value="RGB {0,0,0}"/>
+      <att name="imageDisplay" value="true"/>
+      <att name="imageLocation" value="icons/activity/eventHandler.png"/>
+      <att name="scaleImage" value="false"/>
+      <att name="imageTextGap" value="4"/>
+      <att name="textAlignment" value="2"/>
+      <att name="textPlacement" value="16"/>
+      <att name="location" value="LOC {0,0}"/>
+      <att name="sizeToFit" value="true"/>
+      <att name="size" value="DIM {20,20}"/>
+      <att name="bandConstraints" value="BANDS {}"/>
+      <att name="bandOrientation" value="true"/>
+   </node>
+   <node id="36" name="SCOPE_COMPENSATOR">
+      <att name="text" value="Compensation Handler"/>
+      <att name="objectId" value="116817448373400057"/>
+      <att name="drawBorder" value="true"/>
+      <att name="borderColor" value="RGB {128,128,128}"/>
+      <att name="transparent" value="false"/>
+      <att name="backgroundColor" value="RGB {255,255,255}"/>
+      <att name="font" value="FONT {Tahoma,8,0}"/>
+      <att name="fontColor" value="RGB {0,0,0}"/>
+      <att name="imageDisplay" value="true"/>
+      <att name="imageLocation" value="icons/activity/compensationHandler.png"/>
+      <att name="scaleImage" value="false"/>
+      <att name="imageTextGap" value="4"/>
+      <att name="textAlignment" value="2"/>
+      <att name="textPlacement" value="16"/>
+      <att name="location" value="LOC {0,0}"/>
+      <att name="sizeToFit" value="false"/>
+      <att name="size" value="DIM {20,20}"/>
+   </node>
+   <edge id="0" source="25" target="29">
+      <att name="text" value=""/>
+      <att name="objectId" value="116817558335904017"/>
+      <att name="end" value="2"/>
+      <att name="start" value="0"/>
+      <att name="lineStyle" value="1"/>
+      <att name="lineColor" value="RGB {128,128,128}"/>
+      <att name="showLabel" value="false"/>
+      <att name="routerOverride" value="0"/>
+      <att name="labelFont" value="FONT {Tahoma,8,0}"/>
+      <att name="linkName" value="L1"/>
+      <att name="xtnCondition" value=""/>
+      <att name="BPELComment" value=""/>
+   </edge>
+   <edge id="1" source="27" target="32">
+      <att name="text" value=""/>
+      <att name="objectId" value="116817558546804077"/>
+      <att name="end" value="2"/>
+      <att name="start" value="0"/>
+      <att name="lineStyle" value="1"/>
+      <att name="lineColor" value="RGB {128,128,128}"/>
+      <att name="showLabel" value="false"/>
+      <att name="routerOverride" value="0"/>
+      <att name="labelFont" value="FONT {Tahoma,8,0}"/>
+      <att name="linkName" value="L2"/>
+      <att name="xtnCondition" value="bpws:getVariableData('getDistanceResponse', 'getDistanceReturn') &gt; 0"/>
+      <att name="BPELComment" value=""/>
+   </edge>
+   <edge id="2" source="27" target="26">
+      <att name="text" value=""/>
+      <att name="objectId" value="116817558825004137"/>
+      <att name="end" value="2"/>
+      <att name="start" value="0"/>
+      <att name="lineStyle" value="1"/>
+      <att name="lineColor" value="RGB {128,128,128}"/>
+      <att name="showLabel" value="false"/>
+      <att name="routerOverride" value="0"/>
+      <att name="labelFont" value="FONT {Tahoma,8,0}"/>
+      <att name="linkName" value="L3"/>
+      <att name="xtnCondition" value="bpws:getVariableData('getDistanceResponse', 'getDistanceReturn') = 0"/>
+      <att name="BPELComment" value=""/>
+   </edge>
+   <edge id="3" source="28" target="26">
+      <att name="text" value=""/>
+      <att name="objectId" value="116817559104604197"/>
+      <att name="end" value="2"/>
+      <att name="start" value="0"/>
+      <att name="lineStyle" value="1"/>
+      <att name="lineColor" value="RGB {128,128,128}"/>
+      <att name="showLabel" value="false"/>
+      <att name="routerOverride" value="0"/>
+      <att name="labelFont" value="FONT {Tahoma,8,0}"/>
+      <att name="linkName" value="L4"/>
+      <att name="xtnCondition" value=""/>
+      <att name="BPELComment" value=""/>
+   </edge>
+   <edge id="4" source="29" target="27">
+      <att name="text" value=""/>
+      <att name="objectId" value="116817643423406651"/>
+      <att name="end" value="2"/>
+      <att name="start" value="0"/>
+      <att name="lineStyle" value="1"/>
+      <att name="lineColor" value="RGB {128,128,128}"/>
+      <att name="showLabel" value="false"/>
+      <att name="routerOverride" value="0"/>
+      <att name="labelFont" value="FONT {Tahoma,8,0}"/>
+      <att name="linkName" value="L5"/>
+      <att name="xtnCondition" value=""/>
+      <att name="BPELComment" value=""/>
+   </edge>
+   <edge id="5" source="32" target="28">
+      <att name="text" value=""/>
+      <att name="objectId" value="116817649756208451"/>
+      <att name="end" value="2"/>
+      <att name="start" value="0"/>
+      <att name="lineStyle" value="1"/>
+      <att name="lineColor" value="RGB {128,128,128}"/>
+      <att name="showLabel" value="false"/>
+      <att name="routerOverride" value="0"/>
+      <att name="labelFont" value="FONT {Tahoma,8,0}"/>
+      <att name="linkName" value="L6"/>
+      <att name="xtnCondition" value=""/>
+      <att name="BPELComment" value=""/>
+   </edge>
+</graph>

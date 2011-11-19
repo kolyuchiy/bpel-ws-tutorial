@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="shipment" targetNamespace="http://kolia.pp.ru/shipment/" xmlns:bpws="http://schemas.xmlsoap.org/ws/2003/03/business-process/" xmlns:tns="http://kolia.pp.ru/shipment/" xmlns:plnk="http://schemas.xmlsoap.org/ws/2003/05/partner-link/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:message name="orderResponse">
+    <wsdl:part name="shipPrice" type="xsd:double"/>
+  </wsdl:message>
+  <wsdl:message name="orderRequest">
+    <wsdl:part name="shipFrom" type="xsd:string"/>
+    <wsdl:part name="shipTo" type="xsd:string"/>
+  </wsdl:message>
+  <wsdl:portType name="ShipmentOrder">
+    <wsdl:operation name="order">
+      <wsdl:input message="tns:orderRequest"/>
+      <wsdl:output message="tns:orderResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="shipmentSOAP" type="tns:ShipmentOrder">
+    <soap:binding xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="order">
+    <soap:operation xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" soapAction="http://kolia.pp.ru/shipment/NewOperation"/>
+      <wsdl:input>
+    <soap:body xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://kolia.pp.ru/shipment/" use="encoded"/>
+      </wsdl:input>
+      <wsdl:output>
+    <soap:body xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://kolia.pp.ru/shipment/" use="encoded"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="shipment">
+    <wsdl:port name="shipmentSOAP" binding="tns:shipmentSOAP">
+    <soap:address xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" location="http://localhost:8080/active-bpel/services/ShipmentService"/>
+    </wsdl:port>
+  </wsdl:service>
+<plnk:partnerLinkType name="ShipperLinkType">
+   <plnk:role name="shipper">
+      <plnk:portType name="tns:ShipmentOrder"/>
+   </plnk:role>
+</plnk:partnerLinkType>
+</wsdl:definitions>

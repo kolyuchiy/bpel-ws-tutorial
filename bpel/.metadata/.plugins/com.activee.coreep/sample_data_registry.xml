@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Registry>
+   <Variable name="getDistanceResponse" namespace_uri="http://webservices.imacination.com/distance/Distance.jws">
+      <Part data="100" is_complex="false" name="getDistanceReturn"/>
+   </Variable>
+   <Variable name="orderResponse" namespace_uri="http://kolia.pp.ru/shipment/">
+      <Part data="0.0" is_complex="false" name="shipPrice"/>
+   </Variable>
+   <Variable name="calculatePriceResponse" namespace_uri="http://kolia.pp.ru/calculator/">
+      <Part data="100" is_complex="false" name="price"/>
+   </Variable>
+</Registry>

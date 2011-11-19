@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://webservices.imacination.com/distance/Distance.jws" xmlns:bpws="http://schemas.xmlsoap.org/ws/2003/03/business-process/" xmlns:impl="http://webservices.imacination.com/distance/Distance.jws" xmlns:intf="http://webservices.imacination.com/distance/Distance.jws" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:plnk="http://schemas.xmlsoap.org/ws/2003/05/partner-link/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:message name="getStateRequest">
+    <wsdl:part name="zip" type="xsd:string"/>
+  </wsdl:message>
+  <wsdl:message name="getStateResponse">
+    <wsdl:part name="getStateReturn" type="xsd:string"/>
+  </wsdl:message>
+  <wsdl:message name="getCityResponse">
+    <wsdl:part name="getCityReturn" type="xsd:string"/>
+  </wsdl:message>
+  <wsdl:message name="getLatitudeRequest">
+    <wsdl:part name="zip" type="xsd:string"/>
+  </wsdl:message>
+  <wsdl:message name="getDistanceResponse">
+    <wsdl:part name="getDistanceReturn" type="xsd:double"/>
+  </wsdl:message>
+  <wsdl:message name="getLocationResponse">
+    <wsdl:part name="getLocationReturn" type="xsd:string"/>
+  </wsdl:message>
+  <wsdl:message name="getLongitudeResponse">
+    <wsdl:part name="getLongitudeReturn" type="xsd:double"/>
+  </wsdl:message>
+  <wsdl:message name="getCityRequest">
+    <wsdl:part name="zip" type="xsd:string"/>
+  </wsdl:message>
+  <wsdl:message name="getLongitudeRequest">
+    <wsdl:part name="zip" type="xsd:string"/>
+  </wsdl:message>
+  <wsdl:message name="getLocationRequest">
+    <wsdl:part name="zip" type="xsd:string"/>
+  </wsdl:message>
+  <wsdl:message name="getDistanceRequest">
+    <wsdl:part name="fromZip" type="xsd:string"/>
+    <wsdl:part name="toZip" type="xsd:string"/>
+  </wsdl:message>
+  <wsdl:message name="getLatitudeResponse">
+    <wsdl:part name="getLatitudeReturn" type="xsd:double"/>
+  </wsdl:message>
+  <wsdl:portType name="Distance">
+    <wsdl:operation name="getState" parameterOrder="zip">
+      <wsdl:input name="getStateRequest" message="impl:getStateRequest"/>
+      <wsdl:output name="getStateResponse" message="impl:getStateResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="getLocation" parameterOrder="zip">
+      <wsdl:input name="getLocationRequest" message="impl:getLocationRequest"/>
+      <wsdl:output name="getLocationResponse" message="impl:getLocationResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="getCity" parameterOrder="zip">
+      <wsdl:input name="getCityRequest" message="impl:getCityRequest"/>
+      <wsdl:output name="getCityResponse" message="impl:getCityResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="getDistance" parameterOrder="fromZip toZip">
+      <wsdl:input name="getDistanceRequest" message="impl:getDistanceRequest"/>
+      <wsdl:output name="getDistanceResponse" message="impl:getDistanceResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="getLatitude" parameterOrder="zip">
+      <wsdl:input name="getLatitudeRequest" message="impl:getLatitudeRequest"/>
+      <wsdl:output name="getLatitudeResponse" message="impl:getLatitudeResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="getLongitude" parameterOrder="zip">
+      <wsdl:input name="getLongitudeRequest" message="impl:getLongitudeRequest"/>
+      <wsdl:output name="getLongitudeResponse" message="impl:getLongitudeResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="DistanceSoapBinding" type="impl:Distance">
+    <wsdlsoap:binding xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getState">
+    <wsdlsoap:operation xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" soapAction=""/>
+      <wsdl:input name="getStateRequest">
+    <wsdlsoap:body xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://DefaultNamespace" use="encoded"/>
+      </wsdl:input>
+      <wsdl:output name="getStateResponse">
+    <wsdlsoap:body xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservices.imacination.com/distance/Distance.jws" use="encoded"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLocation">
+    <wsdlsoap:operation xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" soapAction=""/>
+      <wsdl:input name="getLocationRequest">
+    <wsdlsoap:body xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://DefaultNamespace" use="encoded"/>
+      </wsdl:input>
+      <wsdl:output name="getLocationResponse">
+    <wsdlsoap:body xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservices.imacination.com/distance/Distance.jws" use="encoded"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCity">
+    <wsdlsoap:operation xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" soapAction=""/>
+      <wsdl:input name="getCityRequest">
+    <wsdlsoap:body xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://DefaultNamespace" use="encoded"/>
+      </wsdl:input>
+      <wsdl:output name="getCityResponse">
+    <wsdlsoap:body xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservices.imacination.com/distance/Distance.jws" use="encoded"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDistance">
+    <wsdlsoap:operation xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" soapAction=""/>
+      <wsdl:input name="getDistanceRequest">
+    <wsdlsoap:body xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://DefaultNamespace" use="encoded"/>
+      </wsdl:input>
+      <wsdl:output name="getDistanceResponse">
+    <wsdlsoap:body xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservices.imacination.com/distance/Distance.jws" use="encoded"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLatitude">
+    <wsdlsoap:operation xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" soapAction=""/>
+      <wsdl:input name="getLatitudeRequest">
+    <wsdlsoap:body xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://DefaultNamespace" use="encoded"/>
+      </wsdl:input>
+      <wsdl:output name="getLatitudeResponse">
+    <wsdlsoap:body xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservices.imacination.com/distance/Distance.jws" use="encoded"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLongitude">
+    <wsdlsoap:operation xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" soapAction=""/>
+      <wsdl:input name="getLongitudeRequest">
+    <wsdlsoap:body xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://DefaultNamespace" use="encoded"/>
+      </wsdl:input>
+      <wsdl:output name="getLongitudeResponse">
+    <wsdlsoap:body xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservices.imacination.com/distance/Distance.jws" use="encoded"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DistanceService">
+    <wsdl:port name="Distance" binding="impl:DistanceSoapBinding">
+    <wsdlsoap:address xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" location="http://webservices.imacination.com/distance/Distance.jws"/>
+    </wsdl:port>
+  </wsdl:service>
+<plnk:partnerLinkType name="DistanceLinkType">
+   <plnk:role name="distance">
+      <plnk:portType name="impl:Distance"/>
+   </plnk:role>
+</plnk:partnerLinkType>
+</wsdl:definitions>

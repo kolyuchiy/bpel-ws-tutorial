@@ -1,0 +1,20 @@
+WebappLoader[]: Deploying class repositories to work directory E:\bpel-labs\bpel\.metadata\.plugins\org.eclipse.tomcat\ROOT
+ContextConfig[]: Added certificates -> request attribute Valve
+StandardManager[]: Seeding random number generator class java.security.SecureRandom
+StandardManager[]: Seeding of random number generator has been completed
+StandardWrapper[:default]: Loading container servlet default
+StandardWrapper[:invoker]: Loading container servlet invoker
+CoyoteConnector Coyote can't register jmx for protocol
+WebappLoader[/rdebug]: Deploying class repositories to work directory E:\bpel-labs\bpel\.metadata\.plugins\org.eclipse.tomcat\rdebug
+WebappLoader[/rdebug]: Deploy JAR /WEB-INF/lib/activation.jar to g:\Program Files\Active Endpoints\ActiveBPEL Designer\Designer\eclipse\plugins\com.activee.bpel_2.0.0\WEB-INF\lib\activation.jar
+WebappLoader[/rdebug]: Deploy JAR /WEB-INF/lib/ae_rdebug_svr.jar to g:\Program Files\Active Endpoints\ActiveBPEL Designer\Designer\eclipse\plugins\com.activee.bpel_2.0.0\WEB-INF\lib\ae_rdebug_svr.jar
+WebappLoader[/rdebug]: Deploy JAR /WEB-INF/lib/axis.jar to g:\Program Files\Active Endpoints\ActiveBPEL Designer\Designer\eclipse\plugins\com.activee.bpel_2.0.0\WEB-INF\lib\axis.jar
+WebappLoader[/rdebug]: Deploy JAR /WEB-INF/lib/commons-discovery.jar to g:\Program Files\Active Endpoints\ActiveBPEL Designer\Designer\eclipse\plugins\com.activee.bpel_2.0.0\WEB-INF\lib\commons-discovery.jar
+WebappLoader[/rdebug]: Deploy JAR /WEB-INF/lib/mail.jar to g:\Program Files\Active Endpoints\ActiveBPEL Designer\Designer\eclipse\plugins\com.activee.bpel_2.0.0\WEB-INF\lib\mail.jar
+WebappLoader[/rdebug]: Deploy JAR /WEB-INF/lib/saaj.jar to g:\Program Files\Active Endpoints\ActiveBPEL Designer\Designer\eclipse\plugins\com.activee.bpel_2.0.0\WEB-INF\lib\saaj.jar
+WebappLoader[/rdebug]: Deploy JAR /WEB-INF/lib/xercesImpl.jar to g:\Program Files\Active Endpoints\ActiveBPEL Designer\Designer\eclipse\plugins\com.activee.bpel_2.0.0\WEB-INF\lib\xercesImpl.jar
+ContextConfig[/rdebug]: Added certificates -> request attribute Valve
+StandardManager[/rdebug]: Seeding random number generator class java.security.SecureRandom
+StandardManager[/rdebug]: Seeding of random number generator has been completed
+StandardWrapper[/rdebug:default]: Loading container servlet default
+StandardWrapper[/rdebug:invoker]: Loading container servlet invoker
